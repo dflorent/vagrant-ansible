@@ -1,0 +1,7 @@
+---
+- name: set root password
+  debconf: name=mysql-server question=mysql-server/root_password value=root vtype=password
+- name: set root repassword
+  debconf: name=mysql-server question=mysql-server/root_password_again value=root vtype=password
+- name: install mysql
+  apt: name=mysql-server state=present

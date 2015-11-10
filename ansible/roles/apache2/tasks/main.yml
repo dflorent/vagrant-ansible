@@ -1,0 +1,10 @@
+---
+- name: install apache2
+  apt: name=apache2 state=present
+- name: apache2 config
+  template: src=apache2.conf.j2 dest=/etc/apache2/apache2.conf
+- name: change 000-default.conf
+  template: src=000-default.conf.j2 dest=/etc/apache2/sites-available/000-default.conf
+- name: enable apache2 module rewrite
+  apache2_module: name=rewrite state=present
+  notify: restart apache2

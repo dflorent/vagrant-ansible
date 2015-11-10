@@ -1,0 +1,7 @@
+---
+- name: update apt
+  apt: update_cache=yes
+- name: set locale settings
+  shell: locale-gen fr_FR.UTF-8
+- name: install build-essential
+  apt: name=build-essential state=present

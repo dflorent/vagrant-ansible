@@ -1,0 +1,16 @@
+---
+- name: install ruby
+  apt: name={{ item }} state=present
+  with_items:
+    - ruby
+    - ruby-dev
+    - libsqlite3-dev
+    - g++
+- name: install sass
+  shell: gem install sass --no-ri --no-rdoc
+
+# Usage:
+# mailcatcher --foreground --http-ip=0.0.0.0
+# http://YOUR_HOSTNAME:1080
+- name: install mailcatcher
+  shell: gem install mailcatcher --no-ri --no-rdoc

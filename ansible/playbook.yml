@@ -1,0 +1,14 @@
+---
+- hosts: all
+  sudo: true
+  roles:
+    - apt
+    - git
+    - zsh
+    - ruby
+    - mysql
+    - apache2
+    - php
+    - composer
+    - phpmyadmin
+    - nodejs

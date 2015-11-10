@@ -1,0 +1,5 @@
+---
+- name: install git
+  apt: name=git state=present
+- name: git config
+  template: src=gitconfig.j2 dest=/home/vagrant/.gitconfig

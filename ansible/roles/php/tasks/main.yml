@@ -1,0 +1,19 @@
+---
+- name: install php
+  apt: name=php5 state=present
+- name: install php packages
+  apt: name={{ item }} state=present
+  with_items:
+    - php5-apcu
+    - php5-curl
+    - php5-cli
+    - php5-gd
+    - php5-json
+    - php5-mysqlnd
+    - php5-mcrypt
+    - php5-xdebug
+- name: php config
+  template: src=php.ini.j2 dest=/etc/php5/apache2/php.ini
+- name: php xdebug config
+  template: src=xdebug.ini.j2 dest=/etc/php5/mods-available/xdebug.ini
+  notify: restart apache2
