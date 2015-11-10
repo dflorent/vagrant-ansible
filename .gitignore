@@ -1,2 +1,3 @@
 .vagrant
 phpmyadmin
+ansible/group_vars/all.yml

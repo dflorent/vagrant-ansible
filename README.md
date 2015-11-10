@@ -52,3 +52,13 @@ config.vm.hostname = 'example.dev'
 
 mailcatcher --foreground --http-ip=0.0.0.0
 ```
+
+### Git
+
+```
+# ansible/group_vars/all.yml
+
+# git
+git_email: john@doe.com
+git_name: Jonh Doe
+```
