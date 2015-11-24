@@ -6,11 +6,12 @@
     - ruby-dev
     - libsqlite3-dev
     - g++
-- name: install sass
-  shell: gem install sass --no-ri --no-rdoc
-
-# Usage:
+# Mailcatcher usage:
 # mailcatcher --foreground --http-ip=0.0.0.0
 # http://YOUR_HOSTNAME:1080
-- name: install mailcatcher
-  shell: gem install mailcatcher --no-ri --no-rdoc
+- name: install gems
+  shell: gem install {{ item }} --no-ri --no-rdoc
+  with_items:
+    - sass
+    - compass
+    - mailcatcher
