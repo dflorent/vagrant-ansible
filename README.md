@@ -13,6 +13,7 @@ Vagrant development environment provisionned with Ansible.
 
 - Git
 - ZSH with Oh-my-zsh
+- Tmux
 - Ruby
 - Sass
 - Mailcatcher
@@ -20,9 +21,8 @@ Vagrant development environment provisionned with Ansible.
 - Apache2
 - PHP
 - Composer
-- phpMyAdmin
+- phpMyAdmin (optional)
 - Node.js
-- Gulp
 
 ## Usage
 
