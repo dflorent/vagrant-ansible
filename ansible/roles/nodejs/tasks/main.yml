@@ -1,7 +1,5 @@
 ---
-- name: nodesource
+- name: download nodejs
   shell: curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 - name: install nodejs
   apt: name=nodejs state=present
-- name: install gulp
-  npm: name=gulp global=yes
