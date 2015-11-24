@@ -11,5 +11,5 @@
     - apache2
     - php
     - composer
-    - phpmyadmin
+    # - phpmyadmin
     - nodejs
