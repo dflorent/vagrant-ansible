@@ -10,6 +10,7 @@
     - mysql
     - apache2
     - php
+    - phpunit
     - composer
     # - phpmyadmin
     - nodejs
