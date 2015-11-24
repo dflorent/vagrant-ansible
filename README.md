@@ -16,6 +16,7 @@ Vagrant development environment provisionned with Ansible.
 - Tmux
 - Ruby
 - Sass
+- Compass
 - Mailcatcher
 - MySQL
 - Apache2
