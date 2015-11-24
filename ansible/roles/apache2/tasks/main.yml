@@ -5,6 +5,8 @@
   template: src=apache2.conf.j2 dest=/etc/apache2/apache2.conf
 - name: change 000-default.conf
   template: src=000-default.conf.j2 dest=/etc/apache2/sites-available/000-default.conf
+- name: change apache owner from www-data to vagrant
+  template: src=envvars.j2 dest=/etc/apache2/envvars
 - name: enable apache2 module rewrite
   apache2_module: name=rewrite state=present
   notify: restart apache2
