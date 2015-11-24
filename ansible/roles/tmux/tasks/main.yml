@@ -1,0 +1,5 @@
+---
+- name: install tmux
+  apt: name=tmux state=present
+- name: tmux config
+  template: src=tmux.conf.j2 dest=/home/vagrant/.tmux.conf

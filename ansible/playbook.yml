@@ -5,6 +5,7 @@
     - apt
     - git
     - zsh
+    - tmux
     - ruby
     - mysql
     - apache2
